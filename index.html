@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name: 'Mae', grade: 75 },
+            { name: 'Mae', grade: 85 },
+            { name: 'Mae', grade: 89 },
+            { name: 'Mae', grade: 80 },
+            { name: 'Mae', grade: 73 },
+            { name: 'Mae', grade: 74 },
+            { name: 'Mae', grade: 95 },
+            { name: 'Mae', grade: 90 },
+        ];
+
+        let groupedStudents = {
+            excellentStuds: [],
+            veryGoodStuds: [],
+            goodStuds: [],
+            failedStuds: []
+        };
+
+        students.forEach(student => {
+            if (student.grade >= 90) {
+                groupedStudents.excellentStuds.push(student);
+            } else if (student.grade >= 85) {
+                groupedStudents.veryGoodStuds.push(student);
+            } else if (student.grade >= 75) {
+                groupedStudents.goodStuds.push(student);
+            } else {
+                groupedStudents.failedStuds.push(student);
+            }
+        });
+
+        console.log(groupedStudents);
+    </script>
+</body>
+</html>
